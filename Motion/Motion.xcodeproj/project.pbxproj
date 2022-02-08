@@ -16,6 +16,7 @@
 		43F1B1CB27B2B703006FA016 /* MotionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1B1CA27B2B703006FA016 /* MotionUITestsLaunchTests.swift */; };
 		43F1B1D827B2B768006FA016 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1B1D727B2B768006FA016 /* Particle.swift */; };
 		43F1B1DA27B2B7EE006FA016 /* ParticleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1B1D927B2B7EE006FA016 /* ParticleSystem.swift */; };
+		43F1B1DC27B2C2DA006FA016 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1B1DB27B2C2DA006FA016 /* MotionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		43F1B1CA27B2B703006FA016 /* MotionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		43F1B1D727B2B768006FA016 /* Particle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
 		43F1B1D927B2B7EE006FA016 /* ParticleSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleSystem.swift; sourceTree = "<group>"; };
+		43F1B1DB27B2C2DA006FA016 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				43F1B1AD27B2B700006FA016 /* MotionApp.swift */,
 				43F1B1AF27B2B700006FA016 /* ContentView.swift */,
+				43F1B1DB27B2C2DA006FA016 /* MotionManager.swift */,
 				43F1B1D727B2B768006FA016 /* Particle.swift */,
 				43F1B1D927B2B7EE006FA016 /* ParticleSystem.swift */,
 				43F1B1B127B2B703006FA016 /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F1B1DA27B2B7EE006FA016 /* ParticleSystem.swift in Sources */,
+				43F1B1DC27B2C2DA006FA016 /* MotionManager.swift in Sources */,
 				43F1B1B027B2B700006FA016 /* ContentView.swift in Sources */,
 				43F1B1D827B2B768006FA016 /* Particle.swift in Sources */,
 				43F1B1AE27B2B700006FA016 /* MotionApp.swift in Sources */,

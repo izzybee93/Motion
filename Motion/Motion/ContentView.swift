@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var particleSystem = ParticleSystem() // @State for a class here (not @StateObject because it is not an observable object, its simply a cache for the particles
+    @State private var motionHandler = MotionManager()
 
     let options: [(flipX: Bool, flipY: Bool)] = [
         (false, false),
@@ -26,24 +27,26 @@ struct ContentView: View {
                 context.blendMode = .plusLighter
 //                context.addFilter(.colorMultiply(.green)) // filter is not removable over time, so create a copy of context to adjust the colour (struct so value type)
 
+                particleSystem.center = UnitPoint(x: motionHandler.roll + 0.5, y: motionHandler.pitch + 0.5)
+
                 for particle in particleSystem.particles {
 
                     var contextCopy = context
                     contextCopy.addFilter(.colorMultiply(Color(hue: particle.hue, saturation: 1, brightness: 1)))
                     contextCopy.opacity = 1 - (timelineDate - particle.creationDate)
 
-                    for option in options {
+//                    for option in options {
                         var xPosition = particle.x * size.width
                         var yPosition = particle.y * size.height
-
-                        if option.flipX {
-                            xPosition = size.width - xPosition
-                        }
-                        if option.flipY  {
-                            yPosition = size.height - yPosition
-                        }
+//
+//                        if option.flipX {
+//                            xPosition = size.width - xPosition
+//                        }
+//                        if option.flipY  {
+//                            yPosition = size.height - yPosition
+//                        }
                         contextCopy.draw(particleSystem.image, at: CGPoint(x: xPosition, y: yPosition))
-                    }
+//                    }
                 }
             }
         }
